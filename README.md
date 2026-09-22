@@ -5,7 +5,19 @@ If you plan to develop a package, check the [template repository for a Python pa
 
 ## Usage
 
-Click "Use this template" at the top of this page to create a new repository with the same folder structure.
+Download this repository locally, then add the following files to data/raw (download the file from the hyperlink): 
+- [documents-output-json-report_en.json](https://www.ema.europa.eu/en/documents/report/documents-output-json-report_en.json)
+- yyyymmdd-initial-authorisation-epar.zip (this folder contains .txt files already parsed from .pdf files)
+
+In case files are not uploaded, the following files are run:
+- 20260504-documents-output-json-report_en.json
+- 20260504-initial-authorisation-epar.zip
+
+Then, go to the config file. Define regex pattern(s) for your query that will be used to flag documents for your cohort. By default, the patterns are defined to flag the type of opinion given by the EMA. You may read more about [how experts in the EMA committees make decisions for medicinal approval here] (https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/guidance-document-voting-framework-discussion-and-adoption-chmp-opinions_en.pdf).
+
+Running the .py script will produce a print-ready alluvial chart that displays the following:
+- the total number of medicines in your analysis
+- the number of medicines that were flagged by the script
 
 ## Project Structure
 
